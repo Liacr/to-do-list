@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-left: 5px;
+
+  @media (max-width: 1350px) {
+    width: 40vw;
+    margin-right: auto;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+    width: 85vw;
+  }
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  margin-right: 8px;
+  color: var(--primary-color);
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 8px;
+    width: 90%;
+  }
+}
+
+.filterSelect, .sortSelect {
+  margin-right: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: #FFFFFF;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 8px;
+  }
+}

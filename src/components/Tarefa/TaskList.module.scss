@@ -1,0 +1,45 @@
+.taskListContainer {
+  position: absolute;
+  top: 125px;
+  left: 66%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 16px;
+  width: 740px;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1350px) {
+    width: 45vw;
+  }
+
+  @media (max-width: 768px) {
+    top: 300px;
+    left: auto;
+    transform: none;
+    width: 94vw;
+    max-height: 80vh;
+    margin: 0 auto 16px;
+    overflow-y: scroll;
+  }
+}
+
+.taskListItems {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  @media (max-width: 1350px) {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  @media (max-width: 768px) {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}

@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: var(--background-color);
+  border-top: 2.2px solid #5F34A7;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.linkedinLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.linkedinIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.linkedinIcon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.footerTexto {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 0;
+    gap: 5px;
+  }
+
+  .linkedinLink {
+    margin-bottom: 2px;
+  }
+
+  .linkedinIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footerTexto {
+    font-size: 14px;
+  }
+}

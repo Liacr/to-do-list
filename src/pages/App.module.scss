@@ -1,0 +1,246 @@
+@import '../styles/variables.scss';
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background__circle {
+  position: absolute;
+  top: -12%;
+  left: -10%;
+  width: 51vw;
+  height: 51vw;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.background__circle:hover {
+  transform: scale(1.03);
+}
+
+.background__svg {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: auto;
+  opacity: 1;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 110px;
+  width: 6%;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.tarefas {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 60%;
+  height: auto;
+  pointer-events: none;
+}
+
+.textos {
+  position: absolute;
+  top: 18vh;
+  left: 15%;
+  width: 40%;
+  text-align: left;
+}
+
+.linhaSeparadora {
+  width: 66%;
+  height: 2px;
+  background-color: #F0F0F0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 16px 0;
+}
+
+.themeToggleSlider {
+  position: absolute;
+  top: 6%;
+  right: 8%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.themeToggleSlider input[type="checkbox"] {
+  display: none;
+}
+
+.themeToggleSlider .slider {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  background-color: var(--primary-color);
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.themeToggleSlider .slider:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: #f6f6f6;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.themeToggleSlider input[type="checkbox"]:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.themeToggleSlider input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Media Query */
+@media (max-width: 1150px) {
+  .background__circle {
+    top: -15%;
+    left: -10%;
+    width: 75vw;
+    height: 75vw;
+  }
+
+  .background__svg {
+    top: 55%;
+    width: 80vw;
+  }
+
+  .logo {
+    top: 20px;
+    left: 5%;
+    width: 8%;
+  }
+
+  .tarefas {
+    top: -10px;
+    left: 30%;
+    width: 65%;
+  }
+
+  .textos {
+    top: 18vh;
+    left: 10%;
+    width: 85vw;
+  }
+
+  .linhaSeparadora {
+    width: 40%;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .background {
+    overflow-y: auto;
+    min-height: 100vh;
+  }
+
+  .background__circle {
+    top: -18%;
+    left: -18%;
+    width: 120vw;
+    height: 120vw;
+  }
+
+  .background__svg {
+    top: 920px;
+    width: 120vw;
+  }
+
+  .logo {
+    top: 20px;
+    left: 5%;
+    width: 10%;
+  }
+
+  .tarefas {
+    top: 5px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+  }
+
+  .textos {
+    top: 12vh;
+    left: 50%;
+    width: 90vw;
+    transform: translateX(-50%);
+  }
+
+  .linhaSeparadora {
+    margin-left: 5%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    max-height: 100vh;
+    margin: 0 auto 16px;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 468px) {
+  .background__svg {
+    top: 900px;
+  }
+}
+
+
+@media (max-width: 438px) {
+  .background__svg {
+    top: 1200px;
+  }
+}
+
+@media (max-width: 412px) {
+  .background__svg {
+  top: 1100px;
+  }
+}
+
+@media (max-width: 390px) {
+  .background__svg {
+  top: 880px;
+  }
+}
+
+@media (max-width: 360px) {
+  .background__svg {
+  top: 920px;
+  }
+}

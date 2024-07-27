@@ -1,0 +1,245 @@
+@import '../../styles/variables.scss';
+
+.taskItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--quaternary-color);
+  background-color: var(--terciary-color);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  position: relative;
+  transition: transform 0.2s ease;
+
+  @media (max-width: 1350px) {
+    padding: 6px;
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+.taskItem:hover {
+  transform: scale(1.02);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background-color: #fbfbfb;
+  cursor: pointer;
+  margin-right: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+
+  @media (max-width: 768px) {
+    margin-right: 4px;
+  }
+}
+
+.checkbox:checked {
+  background-color: var(--primary-color);
+}
+
+.date,
+.time {
+  font-weight: bold;
+  margin-right: 8px;
+
+  @media (max-width: 768px) {
+    margin-right: 4px;
+  }
+}
+
+.taskContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 1350px) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.date {
+  margin-right: 6px;
+
+  @media (max-width: 768px) {
+    margin-right: 3px;
+  }
+}
+
+.time {
+  margin-right: 10px;
+  font-weight: 800;
+
+  @media (max-width: 768px) {
+    margin-right: 5px;
+  }
+}
+
+.taskText {
+  flex: 1;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+.taskItem.concluida .taskText {
+  text-decoration: line-through;
+}
+
+.taskItem.vencida {
+  background-color: #F0F0F0;
+  color: #999999;
+}
+
+.editInput {
+  border-radius: 8px;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  text-align: center;
+  border: none;
+  padding: 6px;
+  outline: none;
+  margin-right: 8px;
+
+  @media (max-width: 768px) {
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+.dateInput,
+.timeInput {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  color: white;
+  padding: 8px;
+  border: none;
+  outline: none;
+  margin-right: 5px;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    margin-right: 3px;
+    margin-bottom: 4px;
+  }
+}
+
+.editButtons {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1350px) {
+    margin-top: 6px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.saveButton,
+.renewButton,
+.deleteButton,
+.cancelButton,
+.editButton {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  margin: 4px;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  @media (max-width: 768px) {
+    padding: 6px 10px;
+    margin: 2px;
+  }
+}
+
+.editButton {
+  background: var(--primary-color);
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.deleteButton {
+  background: var(--secondary-color);
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.renewButton {
+  background: var(--primary-color);
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.cancelButton {
+  background: var(--secondary-color);
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.error {
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-weight: bold;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+}
+
+.editContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

@@ -1,0 +1,24 @@
+.descricaoTexto {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FFFFFF;
+  text-align: left;
+  line-height: 1.3rem;
+  animation: fadeInDown 2s ease-out;
+
+  @media (max-width: 768px) {
+    margin-left: 5%;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
