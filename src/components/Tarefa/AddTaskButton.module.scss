@@ -18,16 +18,9 @@
   }
 
   @media (max-width: 468px) {
-    top: 130vh;
-    left: 30%;
-  }
-
-  @media (max-width: 412px) {
-    top: 121vh;
-  }
-
-  @media (max-width: 360px) {
-    top: 124vh;
+    display: none;
+    top: 70vh;
+    left: 80%;
   }
 }
 
@@ -59,8 +52,18 @@
   width: 32px;
   height: 32px;
   margin-right: 8px;
+
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .text {
   font-weight: 600;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 }

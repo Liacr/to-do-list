@@ -18,16 +18,9 @@
   }
 
   @media (max-width: 468px) {
-    top: 130vh;
-    left: 70%;
-  }
-
-  @media (max-width: 412px) {
-    top: 121vh;
-  }
-
-  @media (max-width: 360px) {
-    top: 124vh;
+    display: none;
+    top: 78vh;
+    left: 80%;
   }
 }
 
@@ -42,7 +35,6 @@
   padding: 0 16px;
   cursor: pointer;
   color: #FFFFFF;
-  font-size: 16px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   
   &:hover {
@@ -59,9 +51,19 @@
   width: 30px;
   height: 30px;
   margin-right: 4px;
+
+  @media (max-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .clearTasksText {
+  font-size: 1rem;
   font-weight: 600;
   margin-top: 3px;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 }

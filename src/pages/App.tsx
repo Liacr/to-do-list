@@ -5,7 +5,9 @@ import Footer from '../components/Footer/Footer';
 import TaskList from '../components/Tarefa/TaskList';
 import AddTaskButton from '../components/Tarefa/AddTaskButton';
 import ClearTasksButton from '../components/Tarefa/ClearTasksButton';
+import AddCircleButton from '../components/Tarefa/AddCircleButton';
 import style from './App.module.scss';
+import MenuOptions from '../components/Tarefa/MenuOptions';
 
 // Atualizar a interface Task para incluir o campo 'vencida'
 interface Task {
@@ -122,7 +124,7 @@ const App: React.FC = () => {
         <DescricaoTexto />
       </div>
 
-      <div className={style.taskContainer}>
+      {/* <div className={style.taskContainer}> */}
         <TaskList
           tarefas={tarefas}
           concluirTarefa={concluirTarefa}
@@ -130,9 +132,10 @@ const App: React.FC = () => {
           editarTarefa={editarTarefa}
           renovarTarefa={renovarTarefa}
         />
-      </div>
+      {/* </div> */}
       
       <AddTaskButton adicionarTarefa={adicionarTarefa} />
+      <AddCircleButton limparTarefas={limparTarefas} adicionarTarefa={adicionarTarefa} />
       <ClearTasksButton limparTarefas={limparTarefas} />
 
       <Footer linkedinSvg={linkedinSvg} />

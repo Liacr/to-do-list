@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.menuList {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 80vh;
+    left: 62%;
+    max-width: 220px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+.textButton {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--quaternary-color);
+}
+
+.textButton:hover {
+    text-decoration: underline;
+    color: var(--quaternary-color);
+}
