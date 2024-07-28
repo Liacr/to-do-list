@@ -116,7 +116,7 @@ const TaskList: React.FC<TaskListProps> = ({
   );
 
   return (
-    <div className={style.taskListContainer}>
+    <section className={style.taskListContainer}>
       <SearchBar
         searchTerm={searchTerm}
         onSearch={handleSearch}
@@ -125,9 +125,9 @@ const TaskList: React.FC<TaskListProps> = ({
         sortOption={sortOption}
         onSort={handleSort}
       />
-      <div className={style.taskListItems}>
+      <ul className={style.taskListItems}>
         {filteredAndSortedTasks.length === 0 ? (
-          <div className={style.noTasks}>Nenhuma tarefa encontrada</div>
+          <h3 className={style.noTasks}>Nenhuma tarefa encontrada</h3>
         ) : (
           filteredAndSortedTasks.map(task => (
             <TaskItem
@@ -140,8 +140,8 @@ const TaskList: React.FC<TaskListProps> = ({
             />
           ))
         )}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }
 

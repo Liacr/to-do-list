@@ -75,7 +75,7 @@
 
 .linhaSeparadora {
   width: 66%;
-  height: 2px;
+  height: 1px;
   background-color: #F0F0F0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 16px 0;
@@ -171,8 +171,8 @@
   .background__circle {
     top: -18%;
     left: -18%;
-    width: 120vw;
-    height: 120vw;
+    width: 150vw;
+    height: 150vw;
   }
 
   .background__svg {
@@ -214,7 +214,7 @@
   }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 768px) {
   .background__svg {
     top: 74vh;
   }

@@ -10,14 +10,14 @@
     left: 50%;
   }
 
-  @media (max-width: 768px) {
-    position: absolute;
-    top: 960px;
-    left: 34%;
-    width: 140px;
-  }
+  // @media (max-width: 768px) {
+  //   position: absolute;
+  //   top: 960px;
+  //   left: 34%;
+  //   width: 140px;
+  // }
 
-  @media (max-width: 468px) {
+  @media (max-width: 768px) {
     display: none;
     top: 70vh;
     left: 80%;

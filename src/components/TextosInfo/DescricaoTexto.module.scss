@@ -1,11 +1,12 @@
 .descricaoTexto {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #FFFFFF;
   text-align: left;
   line-height: 1.3rem;
   animation: fadeInDown 2s ease-out;
+  max-width: 300px;
 
   @media (max-width: 768px) {
     margin-left: 5%;

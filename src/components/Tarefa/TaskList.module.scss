@@ -20,15 +20,15 @@
     left: auto;
     transform: none;
     width: 94vw;
-    max-height: 80vh;
-    margin: 0 auto 16px;
-    overflow-y: scroll;
+    max-height: 100vh;
+    margin: 10px auto;
+    padding-bottom: 100px;
   }
 }
 
 .taskListItems {
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y: auto; 
   overflow-x: hidden;
   padding-right: 10px;
   padding-left: 10px;
@@ -41,5 +41,6 @@
   @media (max-width: 768px) {
     padding-right: 2px;
     padding-left: 2px;
+    overflow-y: hidden;
   }
 }

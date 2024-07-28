@@ -7,7 +7,6 @@ import AddTaskButton from '../components/Tarefa/AddTaskButton';
 import ClearTasksButton from '../components/Tarefa/ClearTasksButton';
 import AddCircleButton from '../components/Tarefa/AddCircleButton';
 import style from './App.module.scss';
-import MenuOptions from '../components/Tarefa/MenuOptions';
 
 // Atualizar a interface Task para incluir o campo 'vencida'
 interface Task {
@@ -112,28 +111,26 @@ const App: React.FC = () => {
   const linkedinSvg = theme === 'light' ? '/linkedin.svg' : '/linkedin-dark.svg';
 
   return (
-    <div className={style.background}>
-      <div className={style.background__circle}></div>
+    <main className={style.background}>
+      <div className={style.background__circle} />
       <img src={backgroundSvg} alt="Background Relogio" className={style.background__svg} />
       <img src={logoSvg} alt="Logo" className={style.logo} />
       <img src="/tarefas.svg" alt="Tarefas" className={style.tarefas} />
 
-      <div className={style.textos}>
+      <section className={style.textos}>
         <ConceitoTexto />
-        <div className={style.linhaSeparadora}></div>
+        <hr className={style.linhaSeparadora}></hr>
         <DescricaoTexto />
-      </div>
+      </section>
 
-      {/* <div className={style.taskContainer}> */}
-        <TaskList
-          tarefas={tarefas}
-          concluirTarefa={concluirTarefa}
-          excluirTarefa={excluirTarefa}
-          editarTarefa={editarTarefa}
-          renovarTarefa={renovarTarefa}
-        />
-      {/* </div> */}
-      
+      <TaskList
+        tarefas={tarefas}
+        concluirTarefa={concluirTarefa}
+        excluirTarefa={excluirTarefa}
+        editarTarefa={editarTarefa}
+        renovarTarefa={renovarTarefa}
+      />
+
       <AddTaskButton adicionarTarefa={adicionarTarefa} />
       <AddCircleButton limparTarefas={limparTarefas} adicionarTarefa={adicionarTarefa} />
       <ClearTasksButton limparTarefas={limparTarefas} />
@@ -149,7 +146,7 @@ const App: React.FC = () => {
         />
         <label htmlFor="themeToggle" className={style.slider}></label>
       </div>
-    </div>
+    </main>
   );
 };
 

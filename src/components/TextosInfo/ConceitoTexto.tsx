@@ -3,11 +3,11 @@ import style from './ConceitoTexto.module.scss';
 
 const ConceitoTexto: React.FC = () => {
   return (
-    <div className={style.conceitoTexto}>
+    <h1 className={style.conceitoTexto}>
       Organize seus dias com <br />
       facilidade: Tarefas Diárias e <br />
       Contínuas
-    </div>
+    </h1>
   );
 };
 

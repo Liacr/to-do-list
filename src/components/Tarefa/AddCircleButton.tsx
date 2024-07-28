@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import style from './AddCircleButton.module.scss';
-import MenuOptions from './MenuOptions';
+import TaskInput from './TaskInput';
 
 interface AddCircleButtonProps {
     limparTarefas: () => void;
@@ -9,7 +9,12 @@ interface AddCircleButtonProps {
 
 const AddCircleButton: React.FC<AddCircleButtonProps> = ({ limparTarefas, adicionarTarefa }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLButtonElement | null>(null);
+    const menuRef = useRef<HTMLUListElement | null>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleClose = () => {
+        setIsVisible(false);
+    };
 
     function toggleMenu() {
         setMenuOpen(prevState => !prevState);
@@ -54,11 +59,29 @@ const AddCircleButton: React.FC<AddCircleButtonProps> = ({ limparTarefas, adicio
 
     return (
         <>
-            <button ref={menuRef} className={style.container} onClick={toggleMenu}>
-                <img src="/adicionar.svg" alt="Abrir menu" className={style.addIcon} />
-            </button>
+            {!menuOpen && 
+                (<button className={style.container} onClick={toggleMenu}>
+                    <img src="/adicionar.svg" alt="Abrir menu" className={style.addIcon} />
+                </button>)
+            }
 
-            {menuOpen && <MenuOptions limparTarefas={limparTarefas} adicionarTarefa={adicionarTarefa}/>}
+            {menuOpen && 
+                (<ul ref={menuRef} className={style.menuList} onClick={handleLinkClick}>
+                    <li onClick={() => setIsVisible(!isVisible)} className={style.textStyle}>
+                        Adicionar tarefa
+                    </li>
+
+                    <li onClick={limparTarefas} className={style.textStyle}>
+                        Limpar tarefas
+                    </li>
+                </ul>)
+            }
+
+            {isVisible && 
+                (
+                    <TaskInput adicionarTarefa={adicionarTarefa} onClose={handleClose} />
+                )
+            }
         </>
     );
 };
