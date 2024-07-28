@@ -22,16 +22,24 @@
   gap: 20px;
 }
 
+.articleFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .title {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .linkedinLink {
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .linkedinIcon {
@@ -49,6 +57,8 @@
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
