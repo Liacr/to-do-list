@@ -8,7 +8,7 @@ ___
 
  # 👩🏻 Dev |
 
-- 💡 Eu, ...
+- 💡 Lianna Ribeiro e Yuri Lima.
   
  # 📋 O Projeto |
 
